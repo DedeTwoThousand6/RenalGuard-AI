@@ -1,0 +1,283 @@
+{
+  "algorithm": "RandomForestClassifier (scikit-learn) dalam Pipeline (SimpleImputer + OneHotEncoder + RandomForest)",
+  "dataset": "raw_CKD_dataset.csv",
+  "n_rows": 25800,
+  "n_features_initial": 35,
+  "n_features_after_encoding": 39,
+  "n_target_classes": 5,
+  "target_classes": [
+    "Healthy Kidney",
+    "Mild CKD (Stage 1–2)",
+    "Moderate CKD (Stage 3)",
+    "Severe CKD (Stage 4)",
+    "Kidney Failure (Stage 5)"
+  ],
+  "best_n_estimators": 10,
+  "best_max_depth": 5,
+  "random_state": 42,
+  "test_size": 0.2,
+  "evaluation_metrics_test": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "precision_weighted": 1.0,
+    "recall_weighted": 1.0,
+    "f1_weighted": 1.0
+  },
+  "per_class_test": {
+    "Healthy Kidney": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3872
+    },
+    "Mild CKD (Stage 1–2)": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 613
+    },
+    "Moderate CKD (Stage 3)": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 361
+    },
+    "Severe CKD (Stage 4)": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 211
+    },
+    "Kidney Failure (Stage 5)": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 103
+    }
+  },
+  "training_accuracy": 1.0,
+  "baseline_majority_accuracy": 0.7503488372093023,
+  "top10_feature_importance": {
+    "Serum_Albumin": 0.17941946055164065,
+    "Urine_Protein": 0.178340136082038,
+    "Blood_Urea_Nitrogen": 0.13377032250881077,
+    "Albumin_Creatinine_Ratio": 0.10859050330890871,
+    "Systolic_BP": 0.10569749458572701,
+    "Urine_Albumin": 0.08618015882956762,
+    "eGFR": 0.07551123494524763,
+    "Packed_Cell_Volume": 0.05297581437355858,
+    "Serum_Creatinine": 0.03110638733701567,
+    "Hemoglobin": 0.021000474720904577
+  },
+  "scenario_A_n_estimators": [
+    {
+      "n_estimators": 10,
+      "train_acc": 1.0,
+      "test_acc": 1.0,
+      "gap": 0.0,
+      "test_bal_acc": 1.0,
+      "test_macro_f1": 1.0,
+      "min_class_recall": 1.0,
+      "test_log_loss": 4.1e-05,
+      "max_tree_depth": 5,
+      "avg_tree_depth": 4.2,
+      "avg_leaves": 6.1,
+      "fit_sec": 0.685941,
+      "delta_test_acc": null
+    },
+    {
+      "n_estimators": 50,
+      "train_acc": 1.0,
+      "test_acc": 1.0,
+      "gap": 0.0,
+      "test_bal_acc": 1.0,
+      "test_macro_f1": 1.0,
+      "min_class_recall": 1.0,
+      "test_log_loss": 3.5e-05,
+      "max_tree_depth": 8,
+      "avg_tree_depth": 4.58,
+      "avg_leaves": 6.74,
+      "fit_sec": 0.797744,
+      "delta_test_acc": 0.0
+    },
+    {
+      "n_estimators": 100,
+      "train_acc": 1.0,
+      "test_acc": 1.0,
+      "gap": 0.0,
+      "test_bal_acc": 1.0,
+      "test_macro_f1": 1.0,
+      "min_class_recall": 1.0,
+      "test_log_loss": 3.5e-05,
+      "max_tree_depth": 8,
+      "avg_tree_depth": 4.65,
+      "avg_leaves": 6.83,
+      "fit_sec": 1.263821,
+      "delta_test_acc": 0.0
+    },
+    {
+      "n_estimators": 200,
+      "train_acc": 1.0,
+      "test_acc": 1.0,
+      "gap": 0.0,
+      "test_bal_acc": 1.0,
+      "test_macro_f1": 1.0,
+      "min_class_recall": 1.0,
+      "test_log_loss": 3.1e-05,
+      "max_tree_depth": 9,
+      "avg_tree_depth": 4.62,
+      "avg_leaves": 6.925,
+      "fit_sec": 1.750547,
+      "delta_test_acc": 0.0
+    },
+    {
+      "n_estimators": 500,
+      "train_acc": 1.0,
+      "test_acc": 1.0,
+      "gap": 0.0,
+      "test_bal_acc": 1.0,
+      "test_macro_f1": 1.0,
+      "min_class_recall": 1.0,
+      "test_log_loss": 2.7e-05,
+      "max_tree_depth": 9,
+      "avg_tree_depth": 4.66,
+      "avg_leaves": 6.84,
+      "fit_sec": 3.899875,
+      "delta_test_acc": 0.0
+    }
+  ],
+  "scenario_B_max_depth": [
+    {
+      "max_depth": "None",
+      "train_acc": 1.0,
+      "test_acc": 1.0,
+      "gap": 0.0,
+      "test_bal_acc": 1.0,
+      "test_macro_f1": 1.0,
+      "min_class_recall": 1.0,
+      "test_log_loss": 4.1e-05,
+      "max_tree_depth": 5,
+      "avg_tree_depth": 4.2,
+      "avg_leaves": 6.1,
+      "fit_sec": 0.475176
+    },
+    {
+      "max_depth": "3",
+      "train_acc": 0.97999,
+      "test_acc": 0.980039,
+      "gap": -4.8e-05,
+      "test_bal_acc": 0.8,
+      "test_macro_f1": 0.760762,
+      "min_class_recall": 0.0,
+      "test_log_loss": 0.051625,
+      "max_tree_depth": 3,
+      "avg_tree_depth": 3.0,
+      "avg_leaves": 4.2,
+      "fit_sec": 0.56151
+    },
+    {
+      "max_depth": "5",
+      "train_acc": 1.0,
+      "test_acc": 1.0,
+      "gap": 0.0,
+      "test_bal_acc": 1.0,
+      "test_macro_f1": 1.0,
+      "min_class_recall": 1.0,
+      "test_log_loss": 4.1e-05,
+      "max_tree_depth": 5,
+      "avg_tree_depth": 4.2,
+      "avg_leaves": 6.1,
+      "fit_sec": 0.634211
+    },
+    {
+      "max_depth": "10",
+      "train_acc": 1.0,
+      "test_acc": 1.0,
+      "gap": 0.0,
+      "test_bal_acc": 1.0,
+      "test_macro_f1": 1.0,
+      "min_class_recall": 1.0,
+      "test_log_loss": 4.1e-05,
+      "max_tree_depth": 5,
+      "avg_tree_depth": 4.2,
+      "avg_leaves": 6.1,
+      "fit_sec": 0.563592
+    },
+    {
+      "max_depth": "20",
+      "train_acc": 1.0,
+      "test_acc": 1.0,
+      "gap": 0.0,
+      "test_bal_acc": 1.0,
+      "test_macro_f1": 1.0,
+      "min_class_recall": 1.0,
+      "test_log_loss": 4.1e-05,
+      "max_tree_depth": 5,
+      "avg_tree_depth": 4.2,
+      "avg_leaves": 6.1,
+      "fit_sec": 0.427282
+    }
+  ],
+  "single_feature_diagnostic_near_perfect": [
+    "Serum_Creatinine",
+    "eGFR",
+    "Albumin_Creatinine_Ratio",
+    "Urine_Protein",
+    "Urine_Albumin",
+    "Blood_Urea_Nitrogen"
+  ],
+  "sensitivity_analysis": [
+    {
+      "skenario": "Semua 35 fitur (model utama)",
+      "fitur_dibuang": 0,
+      "fitur_tersisa": 35,
+      "accuracy": 1.0,
+      "balanced_acc": 1.0,
+      "macro_f1": 1.0,
+      "recall_kelas_terlemah": 1.0
+    },
+    {
+      "skenario": "Tanpa eGFR",
+      "fitur_dibuang": 1,
+      "fitur_tersisa": 34,
+      "accuracy": 1.0,
+      "balanced_acc": 1.0,
+      "macro_f1": 1.0,
+      "recall_kelas_terlemah": 1.0
+    },
+    {
+      "skenario": "Tanpa eGFR & Serum_Creatinine",
+      "fitur_dibuang": 2,
+      "fitur_tersisa": 33,
+      "accuracy": 1.0,
+      "balanced_acc": 1.0,
+      "macro_f1": 1.0,
+      "recall_kelas_terlemah": 1.0
+    },
+    {
+      "skenario": "Tanpa 6 penanda ginjal langsung",
+      "fitur_dibuang": 6,
+      "fitur_tersisa": 29,
+      "accuracy": 0.999419,
+      "balanced_acc": 0.994175,
+      "macro_f1": 0.995633,
+      "recall_kelas_terlemah": 0.970874
+    },
+    {
+      "skenario": "Tanpa semua fitur dg akurasi tunggal >= 95%",
+      "fitur_dibuang": 9,
+      "fitur_tersisa": 26,
+      "accuracy": 0.976163,
+      "balanced_acc": 0.922361,
+      "macro_f1": 0.943093,
+      "recall_kelas_terlemah": 0.834951
+    }
+  ],
+  "leakage_note": "PERINGATAN: label dapat direkonstruksi dari banyak fitur tunggal (eGFR, Serum_Creatinine, ACR, protein/albumin urine, BUN, tekanan darah) dan akurasi tetap tinggi walau fitur tersebut dibuang; indikasi keterpisahan sempurna/data sintetis. Skor evaluasi tidak mencerminkan performa klinis nyata. Lihat notebook bagian 8.2, 9.1, 14.1.",
+  "disclaimer": "Alat bantu penelitian dan edukasi; bukan pengganti diagnosis atau keputusan dokter.",
+  "sklearn_version": "1.7.2",
+  "training_date": "2026-11-17T12:59:44"
+}
